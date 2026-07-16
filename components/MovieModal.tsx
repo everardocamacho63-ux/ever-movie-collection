@@ -57,7 +57,7 @@ aria-label="Cerrar"
 
 <div className="modal-cover">
 <Image
-src={movie.cover}
+src={movie.cover_url || "/covers/placeholder.jpg"}
 alt={`Portada de ${movie.title}`}
 fill
 sizes="300px"
@@ -74,10 +74,10 @@ className="cover-image"
 {movie.title}
 </h2>
 
-{movie.originalTitle &&
-movie.originalTitle !== movie.title && (
+{movie.original_title &&
+movie.original_title !== movie.title && (
 <p className="original-title">
-{movie.originalTitle}
+{movie.original_title}
 </p>
 )}
 
@@ -95,7 +95,7 @@ Dirigida por {movie.director}
 </p>
 
 <div className="genre-list">
-{movie.genre.map((genre) => (
+{movie.genres.map((genre) => (
 <span key={genre}>{genre}</span>
 ))}
 </div>

@@ -20,7 +20,7 @@ aria-label={`Abrir información de ${movie.title}`}
 >
 <div className="cover-container">
 <Image
-src={movie.cover}
+src={movie.cover_url || "/covers/placeholder.jpg"}
 alt={`Portada de ${movie.title}`}
 fill
 sizes="(max-width: 600px) 45vw, (max-width: 1100px) 25vw, 200px"

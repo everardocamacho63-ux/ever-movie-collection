@@ -55,7 +55,7 @@ movie.title.toLowerCase().includes(normalizedSearch) ||
 movie.director
 .toLowerCase()
 .includes(normalizedSearch) ||
-movie.genre.some((genre) =>
+movie.genres.some((genre) =>
 genre.toLowerCase().includes(normalizedSearch),
 );
 
